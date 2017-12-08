@@ -21,7 +21,7 @@
 
     self = [super initWithFrame:frame];
     if (self) {
-        
+        //用于合并分支的test
         self.imageV = [[UIImageView alloc] init];
         
         self.imageV.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
