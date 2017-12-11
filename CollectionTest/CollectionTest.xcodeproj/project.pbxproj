@@ -66,6 +66,8 @@
 		51D2B0C81F2B015800F11E4C /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D2B0BA1F2B015800F11E4C /* View+MASAdditions.m */; };
 		51D2B0C91F2B015800F11E4C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D2B0BD1F2B015800F11E4C /* ViewController+MASAdditions.m */; };
 		51D2B0CA1F2B015800F11E4C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 51D2B0BE1F2B015800F11E4C /* README.md */; };
+		51DEDAC11FDE68F800306221 /* tableViewNoDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DEDABF1FDE68F800306221 /* tableViewNoDataVC.m */; };
+		51DEDAC21FDE68F800306221 /* tableViewNoDataVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51DEDAC01FDE68F800306221 /* tableViewNoDataVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,7 @@
 		510F6F151F94A1BB00BDD542 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
 		510F6F161F94A1BB00BDD542 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		510F6F211F94A3A700BDD542 /* WeChatSight4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WeChatSight4.mp4; sourceTree = "<group>"; };
+		514EDEB61FDA6D3700A74475 /* CollectionTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollectionTest.entitlements; sourceTree = "<group>"; };
 		5176AA3D1FA176BC001F81E1 /* ciscoVideoFullPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciscoVideoFullPlayer.h; sourceTree = "<group>"; };
 		5176AA3E1FA176BC001F81E1 /* ciscoVideoFullPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ciscoVideoFullPlayer.m; sourceTree = "<group>"; };
 		5176AA3F1FA176BC001F81E1 /* ciscoVideoFullPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ciscoVideoFullPlayer.xib; sourceTree = "<group>"; };
@@ -196,6 +199,9 @@
 		51D2B0BC1F2B015800F11E4C /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		51D2B0BD1F2B015800F11E4C /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		51D2B0BE1F2B015800F11E4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		51DEDABE1FDE68F800306221 /* tableViewNoDataVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableViewNoDataVC.h; sourceTree = "<group>"; };
+		51DEDABF1FDE68F800306221 /* tableViewNoDataVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableViewNoDataVC.m; sourceTree = "<group>"; };
+		51DEDAC01FDE68F800306221 /* tableViewNoDataVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableViewNoDataVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +344,8 @@
 		51C2CDF01F28730000D1BA48 /* CollectionTest */ = {
 			isa = PBXGroup;
 			children = (
+				514EDEB61FDA6D3700A74475 /* CollectionTest.entitlements */,
+				51DEDABD1FDE68D500306221 /* tableVieNoData */,
 				5109D16A1F304CE000F68E45 /* image */,
 				51D2B0A21F2B015800F11E4C /* Masonry */,
 				51C2CDF41F28730000D1BA48 /* AppDelegate.h */,
@@ -459,6 +467,16 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		51DEDABD1FDE68D500306221 /* tableVieNoData */ = {
+			isa = PBXGroup;
+			children = (
+				51DEDABE1FDE68F800306221 /* tableViewNoDataVC.h */,
+				51DEDABF1FDE68F800306221 /* tableViewNoDataVC.m */,
+				51DEDAC01FDE68F800306221 /* tableViewNoDataVC.xib */,
+			);
+			path = tableVieNoData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,8 +544,13 @@
 				TargetAttributes = {
 					51C2CDED1F28730000D1BA48 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = W94M343MV8;
+						DevelopmentTeam = 64594DARR8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					51C2CE061F28730100D1BA48 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -577,6 +600,7 @@
 				5109D16E1F304CE000F68E45 /* clearImage@2x.png in Resources */,
 				510F6F0C1F94A17A00BDD542 /* CISCOVideoCell.xib in Resources */,
 				510F6F221F94A3A700BDD542 /* WeChatSight4.mp4 in Resources */,
+				51DEDAC21FDE68F800306221 /* tableViewNoDataVC.xib in Resources */,
 				51C2CDFE1F28730000D1BA48 /* Assets.xcassets in Resources */,
 				5109D1701F304CE000F68E45 /* label_delete.png in Resources */,
 				5176AA5E1FA176BC001F81E1 /* UIViewControllerVideo.xib in Resources */,
@@ -632,6 +656,7 @@
 				5109D1601F30477100F68E45 /* PYSearchSuggestionViewController.m in Sources */,
 				51D2B0C01F2B015800F11E4C /* MASCompositeConstraint.m in Sources */,
 				5176AA5F1FA176BC001F81E1 /* ViewControllerVideo.m in Sources */,
+				51DEDAC11FDE68F800306221 /* tableViewNoDataVC.m in Sources */,
 				5109D1671F30497B00F68E45 /* NSBundle+PYSearchExtension.m in Sources */,
 				5109D15A1F3046FC00F68E45 /* PYSearchViewController.m in Sources */,
 				51D2B0C31F2B015800F11E4C /* MASLayoutConstraint.m in Sources */,
@@ -798,10 +823,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = W94M343MV8;
+				CODE_SIGN_ENTITLEMENTS = CollectionTest/CollectionTest.entitlements;
+				DEVELOPMENT_TEAM = 64594DARR8;
 				INFOPLIST_FILE = CollectionTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.poplar.CollectionTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.pushTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -811,10 +837,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = W94M343MV8;
+				CODE_SIGN_ENTITLEMENTS = CollectionTest/CollectionTest.entitlements;
+				DEVELOPMENT_TEAM = 64594DARR8;
 				INFOPLIST_FILE = CollectionTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.poplar.CollectionTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.pushTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

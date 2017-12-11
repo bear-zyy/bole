@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +18,42 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
+        
+//        if (IsIOS8 || IsIOS9)
+//        {
+//            UIUserNotificationSettings* userNotificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil];
+//            [[UIApplication sharedApplication] registerUserNotificationSettings:userNotificationSettings];
+//            [[UIApplication sharedApplication] registerForRemoteNotifications];
+//        }else if (IsIOS10)
+//        {
+            UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+            [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                if (!error) {
+                    NSLog(@"request authorization succeeded!");
+                    [[UIApplication sharedApplication] registerForRemoteNotifications];
+                }
+            }];
+//        }
+        
+    }
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)pToken{
+    NSLog(@"---Token--%@", pToken);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    
+    NSLog(@"userInfo == %@",userInfo);
+//    NSString *message = [[userInfo objectForKey:@"aps"]objectForKey:@"alert"];
+//
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//
+//    [alert show];
 }
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
