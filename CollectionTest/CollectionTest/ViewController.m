@@ -14,6 +14,7 @@
 #import "PYSearchViewController.h"
 #import "UIViewControllerVideo.h"
 #import "collectionTableViewController.h"
+#import "tableViewNoDataVC.h"
 @interface ViewController ()<UICollectionViewDelegate , UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,PYSearchViewControllerDelegate>
 {
 
@@ -106,7 +107,22 @@
     [collectiontable setTitle:@"collectiontable" forState:UIControlStateNormal];
     collectiontable.frame = CGRectMake(100, 400, 100, 100);
     [self.view addSubview:collectiontable];
+    
+    UIButton * newtest= [UIButton buttonWithType:UIButtonTypeCustom];
+    [newtest addTarget:self action:@selector(newtestclick) forControlEvents:UIControlEventTouchUpInside];
+    [newtest setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [newtest setTitle:@"newtest" forState:UIControlStateNormal];
+    newtest.frame = CGRectMake(100, 500, 100, 100);
+    [self.view addSubview:newtest];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)newtestclick{
+    
+    tableViewNoDataVC * vc = [[tableViewNoDataVC alloc] init];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 -(void)collectionclick{
