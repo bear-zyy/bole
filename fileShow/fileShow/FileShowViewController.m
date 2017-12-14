@@ -67,7 +67,7 @@
         NSString *fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
         
         NSLog(@"targetPath:%@",targetPath);
-        NSLog(@"fullPath:%@",fullPath);
+        NSLog(@"啊啊fullPath:%@",fullPath);
         
         return [NSURL fileURLWithPath:fullPath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
