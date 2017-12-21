@@ -56,6 +56,7 @@
             default:
                 NSLog(@"支付失败，retcode=%d",resp.errCode);
                 break;
+        }
     }
     
 }
@@ -85,6 +86,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-
 @end
+    

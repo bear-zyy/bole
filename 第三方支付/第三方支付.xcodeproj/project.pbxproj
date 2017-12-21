@@ -30,6 +30,8 @@
 		512236FC1FEA63790069A547 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512236FB1FEA63720069A547 /* CoreMotion.framework */; };
 		512237031FEA69260069A547 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 512236FE1FEA69260069A547 /* libWeChatSDK.a */; };
 		512237041FEA69260069A547 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 512236FF1FEA69260069A547 /* README.txt */; };
+		51B13C6C1FEBA67E0003B1A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B13C6B1FEBA6780003B1A1 /* Security.framework */; };
+		51B13C6E1FEBA6BF0003B1A1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B13C6D1FEBA6BF0003B1A1 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		512237001FEA69260069A547 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		512237011FEA69260069A547 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		512237021FEA69260069A547 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		51B13C6B1FEBA6780003B1A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		51B13C6D1FEBA6BF0003B1A1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B13C6C1FEBA67E0003B1A1 /* Security.framework in Frameworks */,
 				512236FC1FEA63790069A547 /* CoreMotion.framework in Frameworks */,
 				512236FA1FEA636B0069A547 /* CFNetwork.framework in Frameworks */,
 				512236F81FEA63580069A547 /* Foundation.framework in Frameworks */,
@@ -98,6 +103,7 @@
 				512237031FEA69260069A547 /* libWeChatSDK.a in Frameworks */,
 				512236F41FEA633F0069A547 /* CoreGraphics.framework in Frameworks */,
 				512236F21FEA632E0069A547 /* CoreText.framework in Frameworks */,
+				51B13C6E1FEBA6BF0003B1A1 /* libsqlite3.0.tbd in Frameworks */,
 				512236F01FEA630B0069A547 /* QuartzCore.framework in Frameworks */,
 				512236EE1FEA62F80069A547 /* CoreTelephony.framework in Frameworks */,
 				512236EC1FEA62E10069A547 /* SystemConfiguration.framework in Frameworks */,
@@ -193,6 +199,8 @@
 		512236E61FEA628E0069A547 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51B13C6D1FEBA6BF0003B1A1 /* libsqlite3.0.tbd */,
+				51B13C6B1FEBA6780003B1A1 /* Security.framework */,
 				512236FB1FEA63720069A547 /* CoreMotion.framework */,
 				512236F91FEA63610069A547 /* CFNetwork.framework */,
 				512236F71FEA63510069A547 /* Foundation.framework */,

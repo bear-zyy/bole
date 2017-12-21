@@ -71,6 +71,8 @@
     
     // NOTE: 如果加签成功，则继续执行支付
     //    if (signedString != nil) {
+    
+    //NSString* scheme    商户程序注册的URL protocol，供支付完成后回调商户程序使用。
     //应用注册scheme,在AliSDKDemo-Info.plist定义URL types
     NSString *appScheme = @"alisdkdemo";
     
